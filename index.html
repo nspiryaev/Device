@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Device</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <!-- Логотип сайта -->
+        <div class="header__logo logo">
+          <a class="logo__link" aria-label="Логотип Device">Device</a>
+        </div>
+        <!-- Поиск по сайту -->
+        <form
+          action="/search"
+          method="get"
+          role="search"
+          aria-label="Поиск по сайту"
+          class="header__search search"
+        >
+          <input
+            type="text"
+            class="search__input"
+            name="query"
+            placeholder="Поиск по сайту"
+            aria-label="Поле для поиска"
+          />
+          <button
+            type="submit"
+            class="search__button"
+            aria-label="Начать поиск"
+          >
+            Найти
+          </button>
+        </form>
+        <!-- Панель пользователя -->
+        <div class="header__user-panel user-panel">
+          <a
+            href="/login"
+            class="user-panel__link"
+            aria-label="Войти в личный кабинет"
+          >
+            Войти
+          </a>
+          <a
+            href="/compare"
+            class="user-panel__link"
+            aria-label="Сравнение товаров"
+          >
+            Сравнить
+          </a>
+          <a href="/cart" class="user-panel__link" aria-label="Корзина">
+            Корзина
+          </a>
+        </div>
+        <!-- Навигация -->
+        <nav class="header__nav nav" aria-label="Основная навигация">
+          <ul class="nav__list">
+            <!-- Каталог товаров с подменю -->
+            <li class="nav__item nav__item--dropdown">
+              <a href="/catalog" class="nav__link">Каталог товаров</a>
+              <ul class="nav__submenu" id="catalog-menu">
+                <li class="nav__submenu-item">
+                  <a href="/catalog/vr" class="nav__submenu-link"
+                    >Виртуальная реальность</a
+                  >
+                </li>
+                <li class="nav__submenu-item">
+                  <a href="/catalog/selfie-monopods" class="nav__submenu-link"
+                    >Моноподы для селфи</a
+                  >
+                </li>
+                <li class="nav__submenu-item">
+                  <a href="/catalog/action-cameras" class="nav__submenu-link"
+                    >Экшн-камеры</a
+                  >
+                </li>
+                <li class="nav__submenu-item">
+                  <a href="/catalog/fitness-bracelets" class="nav__submenu-link"
+                    >Фитнес-браслеты</a
+                  >
+                </li>
+                <li class="nav__submenu-item">
+                  <a href="/catalog/smart-watches" class="nav__submenu-link"
+                    >Умные часы</a
+                  >
+                </li>
+                <li class="nav__submenu-item">
+                  <a href="/catalog/drones" class="nav__submenu-link"
+                    >Квадрокоптеры</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item">
+              <a href="/delivery" class="nav__link">Доставка</a>
+            </li>
+            <li class="nav__item">
+              <a href="/warranty" class="nav__link">Гарантия</a>
+            </li>
+            <li class="nav__item">
+              <a href="/contacts" class="nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
