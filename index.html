@@ -4,105 +4,128 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Device</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- <link rel="stylesheet" href="./css/outline.css" /> -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header class="header">
       <div class="container header__container">
-        <!-- Логотип сайта -->
-        <div class="header__logo logo">
-          <a class="logo__link" aria-label="Логотип Device">Device</a>
-        </div>
-        <!-- Поиск по сайту -->
-        <form
-          action="/search"
-          method="get"
-          role="search"
-          aria-label="Поиск по сайту"
-          class="header__search search"
-        >
-          <input
-            type="text"
-            class="search__input"
-            name="query"
-            placeholder="Поиск по сайту"
-            aria-label="Поле для поиска"
-          />
-          <button
-            type="submit"
-            class="search__button"
-            aria-label="Начать поиск"
+        <!-- Навигация пользователя -->
+        <nav class="header__user-nav user-nav">
+          <!-- Логотип сайта -->
+          <div class="user-nav__logo logo">
+            <a class="logo__link" aria-label="Логотип Device">Device</a>
+          </div>
+          <!-- Поиск по сайту -->
+          <form
+            action="/search"
+            method="get"
+            role="search"
+            aria-label="Поиск по сайту"
+            class="user-nav__search search"
           >
-            Найти
-          </button>
-        </form>
-        <!-- Панель пользователя -->
-        <div class="header__user-panel user-panel">
-          <a
-            href="/login"
-            class="user-panel__link"
-            aria-label="Войти в личный кабинет"
-          >
-            Войти
-          </a>
-          <a
-            href="/compare"
-            class="user-panel__link"
-            aria-label="Сравнение товаров"
-          >
-            Сравнить
-          </a>
-          <a href="/cart" class="user-panel__link" aria-label="Корзина">
-            Корзина
-          </a>
-        </div>
-        <!-- Навигация -->
-        <nav class="header__nav nav" aria-label="Основная навигация">
-          <ul class="nav__list">
+            <label for="search-field" class="search__label visually-hidden"
+              >Поиск по сайту</label
+            >
+            <div class="search__input-wrapper">
+              <input
+                type="text"
+                class="search__input"
+                id="search-field"
+                name="query"
+                placeholder="Поиск по сайту"
+                aria-label="Поле для поиска"
+              />
+            </div>
+            <button
+              type="submit"
+              class="search__button"
+              aria-label="Начать поиск"
+            >
+              <span class="search__button-text"> Найти </span>
+            </button>
+          </form>
+          <!-- Панель пользователя -->
+          <ul class="user-nav__list">
+            <li class="user-nav__item">
+              <a
+                href="#"
+                class="user-nav__link user-nav__link--login"
+                aria-label="Войти в личный кабинет"
+              >
+                Войти
+              </a>
+            </li>
+            <li class="user-nav__item">
+              <a
+                href="#"
+                class="user-nav__link user-nav__link--compare"
+                aria-label="Сравнение товаров"
+              >
+                Сравнить
+              </a>
+            </li>
+            <li class="user-nav__item">
+              <a
+                href="#"
+                class="user-nav__link user-nav__link--cart"
+                aria-label="Корзина"
+              >
+                Корзина
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Навигация главная -->
+        <nav class="header__main-nav main-nav" aria-label="Основная навигация">
+          <ul class="main-nav__list">
             <!-- Каталог товаров с подменю -->
-            <li class="nav__item nav__item--dropdown">
-              <a href="/catalog" class="nav__link">Каталог товаров</a>
-              <ul class="nav__submenu" id="catalog-menu">
-                <li class="nav__submenu-item">
-                  <a href="/catalog/vr" class="nav__submenu-link"
-                    >Виртуальная реальность</a
-                  >
-                </li>
-                <li class="nav__submenu-item">
-                  <a href="/catalog/selfie-monopods" class="nav__submenu-link"
-                    >Моноподы для селфи</a
-                  >
-                </li>
-                <li class="nav__submenu-item">
-                  <a href="/catalog/action-cameras" class="nav__submenu-link"
-                    >Экшн-камеры</a
-                  >
-                </li>
-                <li class="nav__submenu-item">
-                  <a href="/catalog/fitness-bracelets" class="nav__submenu-link"
-                    >Фитнес-браслеты</a
-                  >
-                </li>
-                <li class="nav__submenu-item">
-                  <a href="/catalog/smart-watches" class="nav__submenu-link"
-                    >Умные часы</a
-                  >
-                </li>
-                <li class="nav__submenu-item">
-                  <a href="/catalog/drones" class="nav__submenu-link"
-                    >Квадрокоптеры</a
-                  >
-                </li>
+            <li class="main-nav__item main-nav__item--dropdown">
+              <a href="#" class="main-nav__link main-nav__link--dropdown"
+                >Каталог товаров</a
+              >
+
+              <ul class="catalog-menu">
+                <div class="column">
+                  <li class="catalog-menu__item">
+                    <a href="#" class="catalog-menu__link"
+                      >Виртуальная реальность</a
+                    >
+                  </li>
+                  <li class="catalog-menu__item">
+                    <a href="#" class="catalog-menu__link"
+                      >Моноподы для селфи</a
+                    >
+                  </li>
+                  <li class="catalog-menu__item">
+                    <a href="#" class="catalog-menu__link">Экшн-камеры</a>
+                  </li>
+                </div>
+                <div class="column">
+                  <li class="catalog-menu__item">
+                    <a href="#" class="catalog-menu__link">Фитнес-браслеты</a>
+                  </li>
+                  <li class="catalog-menu__item">
+                    <a href="#" class="catalog-menu__link">Умные часы</a>
+                  </li>
+                </div>
+                <div class="column">
+                  <li class="catalog-menu__item">
+                    <a href="#" class="catalog-menu__link">Квадрокоптеры</a>
+                  </li>
+                </div>
               </ul>
             </li>
-            <li class="nav__item">
-              <a href="/delivery" class="nav__link">Доставка</a>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Доставка</a>
             </li>
-            <li class="nav__item">
-              <a href="/warranty" class="nav__link">Гарантия</a>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Гарантия</a>
             </li>
-            <li class="nav__item">
-              <a href="/contacts" class="nav__link">Контакты</a>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Контакты</a>
             </li>
           </ul>
         </nav>
